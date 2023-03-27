@@ -1,5 +1,5 @@
 #include "LogicSimulator.cpp"
-#include "UserCommand.h"
+#include "UserCommand.cpp"
 #include <iostream>
 #include <sstream>
 #include <string>

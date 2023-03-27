@@ -29,7 +29,7 @@ public:
 
   vector<Device *> getAllIPins() { return iPins; }
 
-  virtual int calOutput(){};
+  virtual int calOutput() { return -1; };
 };
 
 bool Device::isAllIPinsSet() {
