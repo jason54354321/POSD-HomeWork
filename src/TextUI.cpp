@@ -18,7 +18,8 @@ bool TextUI::isFileLoaded() { return logicSimulator.getFileloadSuccess(); }
 
 string TextUI::getiPinLogicFromUser(int index) {
   UserCommand userCommand(regexType.simulate);
-  string userHint = "Please key in the value of input pin " + to_string(index);
+  string userHint =
+      "Please key in the value of input pin " + to_string(index + 1);
   displayMessage(userHint);
 
   return userCommand.getUserInput();
