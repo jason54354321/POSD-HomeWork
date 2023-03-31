@@ -15,8 +15,8 @@ private:
   void displayWarningMsg(string input);
 
 public:
-  UserCommand();
   UserCommand(regex reg);
+
   string getUserInput();
 };
 

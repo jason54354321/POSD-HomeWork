@@ -34,7 +34,9 @@ private:
   void flushCircuitLogic();
 
   void initCircuitLogic();
+
   string toBinaryString(int n, int NumOfInput);
+
   vector<LogicState> toIPinLogics(string binary, int numOfInput);
 
 public:
@@ -43,9 +45,11 @@ public:
   DeviceAmount getDeviceAmount();
 
   vector<LogicState> getSimulationResult(vector<LogicState> iPinLogics);
+
   string getHeaderLine();
-  string getTruthTable();
   string getBodyLine();
+
+  string getTruthTable();
 
   bool load(string path);
 

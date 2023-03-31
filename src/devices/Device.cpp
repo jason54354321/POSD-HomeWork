@@ -37,4 +37,4 @@ LogicState Device::getLogicState() { return logic; }
 
 vector<Device *> Device::getAllIPins() { return iPins; }
 
-int Device::calOutput() { return -1; };
+int Device::calOutput() { return UNKNOWN; };

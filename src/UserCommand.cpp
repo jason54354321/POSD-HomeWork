@@ -5,7 +5,6 @@
 #include <system_error>
 using namespace std;
 
-UserCommand::UserCommand() {}
 UserCommand::UserCommand(regex reg) : filterRegex(reg) {}
 
 string UserCommand::waitInput() {

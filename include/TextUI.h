@@ -25,14 +25,14 @@ private:
 
   void showDeviceAmount();
 
-  void loadingFile();
-
   bool isLogicFormatRight(string iPinLogic);
   void letUserResubmit(int &loopIndex);
 
+  void loadingFile();
   void simulation();
   void truthTable();
   void exit();
+
   void displayMessage(string message);
 
 public:
