@@ -1,6 +1,7 @@
 #ifndef FileDataParser_H
 #define FileDataParser_H
 #include "Device.h"
+#include "DeviceAmount.h"
 #include "GateAND.h"
 #include "GateNOT.h"
 #include "GateOR.h"
@@ -16,9 +17,7 @@ using namespace std;
 class FileDataParser {
 private:
   vector<vector<string>> _fileData;
-  int circuitAmount;
-  int iPinsAmount;
-  int oPinsAmount;
+  DeviceAmount deviceAmount;
 
   vector<string> getCommandLine(int circuitNumber);
 
@@ -29,9 +28,10 @@ private:
 public:
   FileDataParser(vector<vector<string>> fileData);
 
-  vector<Device *> getIPins();
-
-  vector<Device *> getCircuits();
+  vector<Device *> createIPins();
+  vector<Device *> createCircuits();
+  vector<Device *> createOPins(vector<Device *> circuits,
+                               vector<Device *> iPins);
 
   int getIndex(string command);
 
@@ -39,7 +39,5 @@ public:
   bool isCircuit(string command);
 
   void analyzeCircuitsInput(vector<Device *> circuits, vector<Device *> iPins);
-
-  vector<Device *> getOPins(vector<Device *> circuits);
 };
 #endif /* ifndef FileDataParser_H */

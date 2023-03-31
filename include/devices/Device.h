@@ -9,7 +9,7 @@ using namespace std;
 class Device {
 protected:
   vector<Device *> iPins;
-  LogicState logicState = UNKNOWN;
+  LogicState logic = UNKNOWN;
 
   bool isAllIPinsSet();
 

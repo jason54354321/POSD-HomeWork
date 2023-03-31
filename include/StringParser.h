@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class OutputHandler {
+class StringParser {
 private:
   DeviceAmount dAmount;
   vector<Device *> iPins;
@@ -23,8 +23,8 @@ private:
                    stringstream &output);
 
 public:
-  OutputHandler(DeviceAmount dAmount, vector<Device *> iPins,
-                vector<Device *> oPins);
+  StringParser(DeviceAmount dAmount, vector<Device *> iPins,
+               vector<Device *> oPins);
 
   void set(DeviceAmount dAmount, vector<Device *> iPins,
            vector<Device *> oPins);

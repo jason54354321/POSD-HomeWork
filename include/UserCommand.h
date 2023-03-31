@@ -9,8 +9,7 @@ using namespace std;
 
 class UserCommand {
 private:
-  regex reg;
-  string warningMsg;
+  regex filterRegex;
   bool isValidCommand(string input);
   virtual string waitInput();
   void displayWarningMsg(string input);

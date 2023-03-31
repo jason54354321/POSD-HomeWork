@@ -46,14 +46,14 @@ int FileDataParser::toZerobaseIndex(int oneBase) { return oneBase - 1; }
 
 FileDataParser::FileDataParser(vector<vector<string>> fileData)
     : _fileData(fileData) {
-  iPinsAmount = stoi(iPinLine);
-  circuitAmount = stoi(circuitLine);
+  deviceAmount.iPinsAmount = stoi(iPinLine);
+  deviceAmount.circuitAmount = stoi(circuitLine);
 }
 
-vector<Device *> FileDataParser::getIPins() {
+vector<Device *> FileDataParser::createIPins() {
   vector<Device *> iPins;
 
-  for (int i = 0; i < iPinsAmount; i++) {
+  for (int i = 0; i < deviceAmount.iPinsAmount; i++) {
     Device *iPin = new IPin();
     iPin->name = "iPin" + to_string(iPins.size() + 1);
     iPins.push_back(iPin);
@@ -62,16 +62,34 @@ vector<Device *> FileDataParser::getIPins() {
   return iPins;
 };
 
-vector<Device *> FileDataParser::getCircuits() {
+vector<Device *> FileDataParser::createCircuits() {
   vector<Device *> circuits;
 
-  for (int circuitNumber = 0; circuitNumber < circuitAmount; circuitNumber++) {
+  for (int circuitNumber = 0; circuitNumber < deviceAmount.circuitAmount;
+       circuitNumber++) {
     Device *circuit = buildCircuit(circuitNumber);
     circuit->name = "circuit" + to_string(circuits.size() + 1);
     circuits.push_back(circuit);
   }
   return circuits;
 };
+
+vector<Device *> FileDataParser::createOPins(vector<Device *> circuits,
+                                             vector<Device *> iPins) {
+  vector<Device *> OPins;
+  for (auto circuit : circuits) {
+    if (circuit->isOutputPin) {
+      OPins.push_back(circuit);
+    }
+  }
+  for (auto iPin : iPins) {
+    if (iPin->isOutputPin) {
+      OPins.push_back(iPin);
+    }
+  }
+
+  return OPins;
+}
 
 int FileDataParser::getIndex(string command) {
   int index;
@@ -110,25 +128,15 @@ void FileDataParser::analyzeCircuitsInput(vector<Device *> circuits,
       index = getIndex(command);
 
       if (isIPin(command)) {
+        iPins[index]->isOutputPin = false;
         circuit->addInputPin(iPins[index]);
       } else if (isCircuit(command)) {
         circuit->addInputPin(circuits[index]);
+        circuits[index]->isOutputPin = false;
 
         // It couldn't be the final output pin since
         // circuit only got one output pin.
-        circuits[index]->isOutputPin = false;
       }
     }
   }
-}
-
-vector<Device *> FileDataParser::getOPins(vector<Device *> circuits) {
-  vector<Device *> OPins;
-  for (auto circuit : circuits) {
-    if (circuit->isOutputPin) {
-      OPins.push_back(circuit);
-    }
-  }
-
-  return OPins;
 }

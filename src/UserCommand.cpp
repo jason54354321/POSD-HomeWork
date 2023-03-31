@@ -6,7 +6,7 @@
 using namespace std;
 
 UserCommand::UserCommand() {}
-UserCommand::UserCommand(regex reg) : reg(reg) {}
+UserCommand::UserCommand(regex reg) : filterRegex(reg) {}
 
 string UserCommand::waitInput() {
   string result;
@@ -15,7 +15,7 @@ string UserCommand::waitInput() {
 }
 
 bool UserCommand::isValidCommand(string input) {
-  return regex_match(input, reg);
+  return regex_match(input, filterRegex);
 }
 
 void UserCommand::displayWarningMsg(string input) {

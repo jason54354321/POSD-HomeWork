@@ -1,6 +1,5 @@
 #include "LogicSimulator.h"
 #include "LogicState.h"
-#include "OutputHandler.h"
 #include <cmath>
 #include <cstdlib>
 #include <fstream>
@@ -23,22 +22,22 @@ void LogicSimulator::flushCircuitLogic() {
   }
 }
 
-void LogicSimulator::doCircuitLogic() {
+void LogicSimulator::initCircuitLogic() {
   flushCircuitLogic();
 
-  bool calulateFlag = true;
-  while (calulateFlag) {
-    calulateFlag = false;
+  bool running = true;
+  while (running) {
+    running = false;
     for (Device *circuit : circuits) {
       if (circuit->calOutput() == UNKNOWN) {
-        calulateFlag = true;
+        running = true;
       }
     }
   }
 }
 
 void LogicSimulator::freePointer() {
-  if (iPins.size() == 0 || circuits.size() == 0) {
+  if (iPins.size() == 0 && circuits.size() == 0) {
     return;
   }
   cout << "---------" << endl;
@@ -63,7 +62,7 @@ DeviceAmount LogicSimulator::getDeviceAmount() {
 vector<LogicState>
 LogicSimulator::getSimulationResult(vector<LogicState> iPinLogics) {
   initIPinsLogic(iPinLogics);
-  doCircuitLogic();
+  initCircuitLogic();
 
   vector<LogicState> result;
   for (Device *oPin : oPins) {
@@ -73,7 +72,7 @@ LogicSimulator::getSimulationResult(vector<LogicState> iPinLogics) {
 };
 
 string LogicSimulator::getHeaderLine() {
-  OutputHandler outputConverter(deviceAmount, iPins, oPins);
+  StringParser outputConverter(deviceAmount, iPins, oPins);
   stringstream output;
   output << outputConverter.getHeaderLine();
 
@@ -81,7 +80,7 @@ string LogicSimulator::getHeaderLine() {
 }
 
 string LogicSimulator::getBodyLine() {
-  OutputHandler outputConverter(deviceAmount, iPins, oPins);
+  StringParser outputConverter(deviceAmount, iPins, oPins);
   stringstream output;
   output << outputConverter.getBodyLine();
 
@@ -121,7 +120,7 @@ string LogicSimulator::getTruthTable() {
     string binary = toBinaryString(n, numOfInput);
     vector<LogicState> iPinLogics = toIPinLogics(binary, numOfInput);
     initIPinsLogic(iPinLogics);
-    doCircuitLogic();
+    initCircuitLogic();
 
     output << getBodyLine();
   }
@@ -137,18 +136,18 @@ bool LogicSimulator::load(string path) {
   fileData = fileloader.getFileData();
   FileDataParser fileDataParser(fileData);
 
-  iPins = fileDataParser.getIPins();
-  circuits = fileDataParser.getCircuits();
-
+  iPins = fileDataParser.createIPins();
+  circuits = fileDataParser.createCircuits();
   fileDataParser.analyzeCircuitsInput(circuits, iPins);
-  oPins = fileDataParser.getOPins(circuits);
-  deviceAmount = getDeviceAmount();
+  oPins = fileDataParser.createOPins(circuits, iPins);
 
-  fileloadSuccess = true;
+  deviceAmount = getDeviceAmount();
+  isFileloaded = true;
+
   return true;
 };
 
 int LogicSimulator::getIPinsSize() { return iPins.size(); }
 vector<Device *> LogicSimulator::getIPins() { return iPins; }
 vector<Device *> LogicSimulator::getOPins() { return oPins; }
-bool LogicSimulator::getFileloadSuccess() { return fileloadSuccess; }
+bool LogicSimulator::getFileloadSuccess() { return isFileloaded; }

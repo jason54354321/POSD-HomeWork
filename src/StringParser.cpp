@@ -1,4 +1,4 @@
-#include "OutputHandler.h"
+#include "StringParser.h"
 #include "DeviceAmount.h"
 
 #include <sstream>
@@ -16,8 +16,8 @@ enum LineIndicator {
   THRID,
 };
 
-void OutputHandler::linePrinter(LineIndicator line, int iPinNum, int OPinNum,
-                                stringstream &output) {
+void StringParser::linePrinter(LineIndicator line, int iPinNum, int OPinNum,
+                               stringstream &output) {
   for (int n = 1; n <= iPinNum; n++) {
     if (line == FIRST) {
       output << "i ";
@@ -43,18 +43,18 @@ void OutputHandler::linePrinter(LineIndicator line, int iPinNum, int OPinNum,
   output << "\n";
 }
 
-OutputHandler::OutputHandler(DeviceAmount dAmount, vector<Device *> iPins,
-                             vector<Device *> oPins)
+StringParser::StringParser(DeviceAmount dAmount, vector<Device *> iPins,
+                           vector<Device *> oPins)
     : dAmount(dAmount), iPins(iPins), oPins(oPins){};
 
-void OutputHandler::set(DeviceAmount dAmount, vector<Device *> iPins,
-                        vector<Device *> oPins) {
+void StringParser::set(DeviceAmount dAmount, vector<Device *> iPins,
+                       vector<Device *> oPins) {
   this->dAmount = dAmount;
   this->iPins = iPins;
   this->oPins = oPins;
 }
 
-string OutputHandler::getHeaderLine() {
+string StringParser::getHeaderLine() {
   stringstream output;
   linePrinter(FIRST, dAmount.iPinsAmount, dAmount.oPinsAmount, output);
   linePrinter(SECOND, dAmount.iPinsAmount, dAmount.oPinsAmount, output);
@@ -63,7 +63,7 @@ string OutputHandler::getHeaderLine() {
   return output.str();
 }
 
-string OutputHandler::getBodyLine() {
+string StringParser::getBodyLine() {
   stringstream output;
   for (auto iPin : iPins) {
     output << iPin->getLogicState() << " ";

@@ -4,7 +4,7 @@
 #include "FileDataParser.h"
 #include "Fileloader.h"
 #include "LogicState.h"
-#include "OutputHandler.h"
+#include "StringParser.h"
 #include <cmath>
 #include <cstdlib>
 #include <fstream>
@@ -23,7 +23,7 @@ private:
   FRIEND_TEST(TestToBinaryString, Convert5);
 
   DeviceAmount deviceAmount;
-  bool fileloadSuccess = false;
+  bool isFileloaded = false;
   vector<Device *> circuits;
   vector<Device *> iPins;
   vector<Device *> oPins;
@@ -33,7 +33,7 @@ private:
 
   void flushCircuitLogic();
 
-  void doCircuitLogic();
+  void initCircuitLogic();
   string toBinaryString(int n, int NumOfInput);
   vector<LogicState> toIPinLogics(string binary, int numOfInput);
 

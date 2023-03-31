@@ -24,16 +24,16 @@ void Device::addInputPin(Device *device) { iPins.push_back(device); }
 int Device::getIPinsSize() { return iPins.size(); }
 Device *Device::getIPin(int index) { return iPins[index]; }
 
-void Device::setLogicState(LogicState logic) { logicState = logic; }
+void Device::setLogicState(LogicState logic) { this->logic = logic; }
 void Device::setLogicState(int logic) {
   if (logic == 1) {
-    logicState = HIGH;
+    this->logic = HIGH;
   } else if (logic == 0) {
-    logicState = LOW;
+    this->logic = LOW;
   }
 }
 
-LogicState Device::getLogicState() { return logicState; }
+LogicState Device::getLogicState() { return logic; }
 
 vector<Device *> Device::getAllIPins() { return iPins; }
 
