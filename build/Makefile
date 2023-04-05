@@ -64,6 +64,16 @@ CMAKE_BINARY_DIR = D:\aaMyCode\hw1\build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	"C:\Program Files\CMake\bin\ctest.exe" --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -83,6 +93,51 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files\CMake\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -128,29 +183,514 @@ hello/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/build
 .PHONY : hello/fast
 
-main.obj: main.cpp.obj
-.PHONY : main.obj
+#=============================================================================
+# Target rules for targets named hello_test
+
+# Build rule for target.
+hello_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 hello_test
+.PHONY : hello_test
+
+# fast build rule for target.
+hello_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/build
+.PHONY : hello_test/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googlemock\CMakeFiles\gmock.dir\build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googlemock\CMakeFiles\gmock_main.dir\build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googletest\CMakeFiles\gtest.dir\build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps\googletest-build\googletest\CMakeFiles\gtest_main.dir\build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+src/FileDataParser.obj: src/FileDataParser.cpp.obj
+.PHONY : src/FileDataParser.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+src/FileDataParser.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/FileDataParser.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/FileDataParser.cpp.obj
+.PHONY : src/FileDataParser.cpp.obj
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/FileDataParser.i: src/FileDataParser.cpp.i
+.PHONY : src/FileDataParser.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/FileDataParser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/FileDataParser.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/FileDataParser.cpp.i
+.PHONY : src/FileDataParser.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/FileDataParser.s: src/FileDataParser.cpp.s
+.PHONY : src/FileDataParser.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/FileDataParser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/FileDataParser.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/FileDataParser.cpp.s
+.PHONY : src/FileDataParser.cpp.s
+
+src/Fileloader.obj: src/Fileloader.cpp.obj
+.PHONY : src/Fileloader.obj
+
+# target to build an object file
+src/Fileloader.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/Fileloader.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/Fileloader.cpp.obj
+.PHONY : src/Fileloader.cpp.obj
+
+src/Fileloader.i: src/Fileloader.cpp.i
+.PHONY : src/Fileloader.i
+
+# target to preprocess a source file
+src/Fileloader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/Fileloader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/Fileloader.cpp.i
+.PHONY : src/Fileloader.cpp.i
+
+src/Fileloader.s: src/Fileloader.cpp.s
+.PHONY : src/Fileloader.s
+
+# target to generate assembly for a file
+src/Fileloader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/Fileloader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/Fileloader.cpp.s
+.PHONY : src/Fileloader.cpp.s
+
+src/LogicSimulator.obj: src/LogicSimulator.cpp.obj
+.PHONY : src/LogicSimulator.obj
+
+# target to build an object file
+src/LogicSimulator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/LogicSimulator.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/LogicSimulator.cpp.obj
+.PHONY : src/LogicSimulator.cpp.obj
+
+src/LogicSimulator.i: src/LogicSimulator.cpp.i
+.PHONY : src/LogicSimulator.i
+
+# target to preprocess a source file
+src/LogicSimulator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/LogicSimulator.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/LogicSimulator.cpp.i
+.PHONY : src/LogicSimulator.cpp.i
+
+src/LogicSimulator.s: src/LogicSimulator.cpp.s
+.PHONY : src/LogicSimulator.s
+
+# target to generate assembly for a file
+src/LogicSimulator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/LogicSimulator.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/LogicSimulator.cpp.s
+.PHONY : src/LogicSimulator.cpp.s
+
+src/StringParser.obj: src/StringParser.cpp.obj
+.PHONY : src/StringParser.obj
+
+# target to build an object file
+src/StringParser.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/StringParser.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/StringParser.cpp.obj
+.PHONY : src/StringParser.cpp.obj
+
+src/StringParser.i: src/StringParser.cpp.i
+.PHONY : src/StringParser.i
+
+# target to preprocess a source file
+src/StringParser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/StringParser.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/StringParser.cpp.i
+.PHONY : src/StringParser.cpp.i
+
+src/StringParser.s: src/StringParser.cpp.s
+.PHONY : src/StringParser.s
+
+# target to generate assembly for a file
+src/StringParser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/StringParser.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/StringParser.cpp.s
+.PHONY : src/StringParser.cpp.s
+
+src/TextUI.obj: src/TextUI.cpp.obj
+.PHONY : src/TextUI.obj
+
+# target to build an object file
+src/TextUI.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/TextUI.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/TextUI.cpp.obj
+.PHONY : src/TextUI.cpp.obj
+
+src/TextUI.i: src/TextUI.cpp.i
+.PHONY : src/TextUI.i
+
+# target to preprocess a source file
+src/TextUI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/TextUI.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/TextUI.cpp.i
+.PHONY : src/TextUI.cpp.i
+
+src/TextUI.s: src/TextUI.cpp.s
+.PHONY : src/TextUI.s
+
+# target to generate assembly for a file
+src/TextUI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/TextUI.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/TextUI.cpp.s
+.PHONY : src/TextUI.cpp.s
+
+src/UserCommand.obj: src/UserCommand.cpp.obj
+.PHONY : src/UserCommand.obj
+
+# target to build an object file
+src/UserCommand.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/UserCommand.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/UserCommand.cpp.obj
+.PHONY : src/UserCommand.cpp.obj
+
+src/UserCommand.i: src/UserCommand.cpp.i
+.PHONY : src/UserCommand.i
+
+# target to preprocess a source file
+src/UserCommand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/UserCommand.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/UserCommand.cpp.i
+.PHONY : src/UserCommand.cpp.i
+
+src/UserCommand.s: src/UserCommand.cpp.s
+.PHONY : src/UserCommand.s
+
+# target to generate assembly for a file
+src/UserCommand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/UserCommand.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/UserCommand.cpp.s
+.PHONY : src/UserCommand.cpp.s
+
+src/devices/Device.obj: src/devices/Device.cpp.obj
+.PHONY : src/devices/Device.obj
+
+# target to build an object file
+src/devices/Device.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/devices/Device.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/devices/Device.cpp.obj
+.PHONY : src/devices/Device.cpp.obj
+
+src/devices/Device.i: src/devices/Device.cpp.i
+.PHONY : src/devices/Device.i
+
+# target to preprocess a source file
+src/devices/Device.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/devices/Device.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/devices/Device.cpp.i
+.PHONY : src/devices/Device.cpp.i
+
+src/devices/Device.s: src/devices/Device.cpp.s
+.PHONY : src/devices/Device.s
+
+# target to generate assembly for a file
+src/devices/Device.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/devices/Device.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/devices/Device.cpp.s
+.PHONY : src/devices/Device.cpp.s
+
+src/devices/GateAND.obj: src/devices/GateAND.cpp.obj
+.PHONY : src/devices/GateAND.obj
+
+# target to build an object file
+src/devices/GateAND.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/devices/GateAND.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/devices/GateAND.cpp.obj
+.PHONY : src/devices/GateAND.cpp.obj
+
+src/devices/GateAND.i: src/devices/GateAND.cpp.i
+.PHONY : src/devices/GateAND.i
+
+# target to preprocess a source file
+src/devices/GateAND.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/devices/GateAND.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/devices/GateAND.cpp.i
+.PHONY : src/devices/GateAND.cpp.i
+
+src/devices/GateAND.s: src/devices/GateAND.cpp.s
+.PHONY : src/devices/GateAND.s
+
+# target to generate assembly for a file
+src/devices/GateAND.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/devices/GateAND.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/devices/GateAND.cpp.s
+.PHONY : src/devices/GateAND.cpp.s
+
+src/devices/GateNOT.obj: src/devices/GateNOT.cpp.obj
+.PHONY : src/devices/GateNOT.obj
+
+# target to build an object file
+src/devices/GateNOT.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/devices/GateNOT.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/devices/GateNOT.cpp.obj
+.PHONY : src/devices/GateNOT.cpp.obj
+
+src/devices/GateNOT.i: src/devices/GateNOT.cpp.i
+.PHONY : src/devices/GateNOT.i
+
+# target to preprocess a source file
+src/devices/GateNOT.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/devices/GateNOT.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/devices/GateNOT.cpp.i
+.PHONY : src/devices/GateNOT.cpp.i
+
+src/devices/GateNOT.s: src/devices/GateNOT.cpp.s
+.PHONY : src/devices/GateNOT.s
+
+# target to generate assembly for a file
+src/devices/GateNOT.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/devices/GateNOT.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/devices/GateNOT.cpp.s
+.PHONY : src/devices/GateNOT.cpp.s
+
+src/devices/GateOR.obj: src/devices/GateOR.cpp.obj
+.PHONY : src/devices/GateOR.obj
+
+# target to build an object file
+src/devices/GateOR.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/devices/GateOR.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/devices/GateOR.cpp.obj
+.PHONY : src/devices/GateOR.cpp.obj
+
+src/devices/GateOR.i: src/devices/GateOR.cpp.i
+.PHONY : src/devices/GateOR.i
+
+# target to preprocess a source file
+src/devices/GateOR.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/devices/GateOR.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/devices/GateOR.cpp.i
+.PHONY : src/devices/GateOR.cpp.i
+
+src/devices/GateOR.s: src/devices/GateOR.cpp.s
+.PHONY : src/devices/GateOR.s
+
+# target to generate assembly for a file
+src/devices/GateOR.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/devices/GateOR.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/devices/GateOR.cpp.s
+.PHONY : src/devices/GateOR.cpp.s
+
+src/devices/IPin.obj: src/devices/IPin.cpp.obj
+.PHONY : src/devices/IPin.obj
+
+# target to build an object file
+src/devices/IPin.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/devices/IPin.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/devices/IPin.cpp.obj
+.PHONY : src/devices/IPin.cpp.obj
+
+src/devices/IPin.i: src/devices/IPin.cpp.i
+.PHONY : src/devices/IPin.i
+
+# target to preprocess a source file
+src/devices/IPin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/devices/IPin.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/devices/IPin.cpp.i
+.PHONY : src/devices/IPin.cpp.i
+
+src/devices/IPin.s: src/devices/IPin.cpp.s
+.PHONY : src/devices/IPin.s
+
+# target to generate assembly for a file
+src/devices/IPin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/devices/IPin.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/devices/IPin.cpp.s
+.PHONY : src/devices/IPin.cpp.s
+
+src/devices/OPin.obj: src/devices/OPin.cpp.obj
+.PHONY : src/devices/OPin.obj
+
+# target to build an object file
+src/devices/OPin.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/devices/OPin.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/devices/OPin.cpp.obj
+.PHONY : src/devices/OPin.cpp.obj
+
+src/devices/OPin.i: src/devices/OPin.cpp.i
+.PHONY : src/devices/OPin.i
+
+# target to preprocess a source file
+src/devices/OPin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/devices/OPin.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/devices/OPin.cpp.i
+.PHONY : src/devices/OPin.cpp.i
+
+src/devices/OPin.s: src/devices/OPin.cpp.s
+.PHONY : src/devices/OPin.s
+
+# target to generate assembly for a file
+src/devices/OPin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/devices/OPin.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/src/devices/OPin.cpp.s
+.PHONY : src/devices/OPin.cpp.s
+
+src/main.obj: src/main.cpp.obj
+.PHONY : src/main.obj
+
+# target to build an object file
+src/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello.dir\build.make CMakeFiles/hello.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+tests/LogicSimulator_test.obj: tests/LogicSimulator_test.cpp.obj
+.PHONY : tests/LogicSimulator_test.obj
+
+# target to build an object file
+tests/LogicSimulator_test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/tests/LogicSimulator_test.cpp.obj
+.PHONY : tests/LogicSimulator_test.cpp.obj
+
+tests/LogicSimulator_test.i: tests/LogicSimulator_test.cpp.i
+.PHONY : tests/LogicSimulator_test.i
+
+# target to preprocess a source file
+tests/LogicSimulator_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/tests/LogicSimulator_test.cpp.i
+.PHONY : tests/LogicSimulator_test.cpp.i
+
+tests/LogicSimulator_test.s: tests/LogicSimulator_test.cpp.s
+.PHONY : tests/LogicSimulator_test.s
+
+# target to generate assembly for a file
+tests/LogicSimulator_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/tests/LogicSimulator_test.cpp.s
+.PHONY : tests/LogicSimulator_test.cpp.s
+
+tests/UserCommand_test.obj: tests/UserCommand_test.cpp.obj
+.PHONY : tests/UserCommand_test.obj
+
+# target to build an object file
+tests/UserCommand_test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/tests/UserCommand_test.cpp.obj
+.PHONY : tests/UserCommand_test.cpp.obj
+
+tests/UserCommand_test.i: tests/UserCommand_test.cpp.i
+.PHONY : tests/UserCommand_test.i
+
+# target to preprocess a source file
+tests/UserCommand_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/tests/UserCommand_test.cpp.i
+.PHONY : tests/UserCommand_test.cpp.i
+
+tests/UserCommand_test.s: tests/UserCommand_test.cpp.s
+.PHONY : tests/UserCommand_test.s
+
+# target to generate assembly for a file
+tests/UserCommand_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/tests/UserCommand_test.cpp.s
+.PHONY : tests/UserCommand_test.cpp.s
+
+tests/devices_test.obj: tests/devices_test.cpp.obj
+.PHONY : tests/devices_test.obj
+
+# target to build an object file
+tests/devices_test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/tests/devices_test.cpp.obj
+.PHONY : tests/devices_test.cpp.obj
+
+tests/devices_test.i: tests/devices_test.cpp.i
+.PHONY : tests/devices_test.i
+
+# target to preprocess a source file
+tests/devices_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/tests/devices_test.cpp.i
+.PHONY : tests/devices_test.cpp.i
+
+tests/devices_test.s: tests/devices_test.cpp.s
+.PHONY : tests/devices_test.s
+
+# target to generate assembly for a file
+tests/devices_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/tests/devices_test.cpp.s
+.PHONY : tests/devices_test.cpp.s
+
+tests/test.obj: tests/test.cpp.obj
+.PHONY : tests/test.obj
+
+# target to build an object file
+tests/test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/tests/test.cpp.obj
+.PHONY : tests/test.cpp.obj
+
+tests/test.i: tests/test.cpp.i
+.PHONY : tests/test.i
+
+# target to preprocess a source file
+tests/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/tests/test.cpp.i
+.PHONY : tests/test.cpp.i
+
+tests/test.s: tests/test.cpp.s
+.PHONY : tests/test.s
+
+# target to generate assembly for a file
+tests/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hello_test.dir\build.make CMakeFiles/hello_test.dir/tests/test.cpp.s
+.PHONY : tests/test.cpp.s
 
 # Help Target
 help:
@@ -159,11 +699,69 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
+	@echo ... install
+	@echo ... install/local
+	@echo ... install/strip
+	@echo ... list_install_components
 	@echo ... rebuild_cache
+	@echo ... test
+	@echo ... gmock
+	@echo ... gmock_main
+	@echo ... gtest
+	@echo ... gtest_main
 	@echo ... hello
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... hello_test
+	@echo ... src/FileDataParser.obj
+	@echo ... src/FileDataParser.i
+	@echo ... src/FileDataParser.s
+	@echo ... src/Fileloader.obj
+	@echo ... src/Fileloader.i
+	@echo ... src/Fileloader.s
+	@echo ... src/LogicSimulator.obj
+	@echo ... src/LogicSimulator.i
+	@echo ... src/LogicSimulator.s
+	@echo ... src/StringParser.obj
+	@echo ... src/StringParser.i
+	@echo ... src/StringParser.s
+	@echo ... src/TextUI.obj
+	@echo ... src/TextUI.i
+	@echo ... src/TextUI.s
+	@echo ... src/UserCommand.obj
+	@echo ... src/UserCommand.i
+	@echo ... src/UserCommand.s
+	@echo ... src/devices/Device.obj
+	@echo ... src/devices/Device.i
+	@echo ... src/devices/Device.s
+	@echo ... src/devices/GateAND.obj
+	@echo ... src/devices/GateAND.i
+	@echo ... src/devices/GateAND.s
+	@echo ... src/devices/GateNOT.obj
+	@echo ... src/devices/GateNOT.i
+	@echo ... src/devices/GateNOT.s
+	@echo ... src/devices/GateOR.obj
+	@echo ... src/devices/GateOR.i
+	@echo ... src/devices/GateOR.s
+	@echo ... src/devices/IPin.obj
+	@echo ... src/devices/IPin.i
+	@echo ... src/devices/IPin.s
+	@echo ... src/devices/OPin.obj
+	@echo ... src/devices/OPin.i
+	@echo ... src/devices/OPin.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
+	@echo ... tests/LogicSimulator_test.obj
+	@echo ... tests/LogicSimulator_test.i
+	@echo ... tests/LogicSimulator_test.s
+	@echo ... tests/UserCommand_test.obj
+	@echo ... tests/UserCommand_test.i
+	@echo ... tests/UserCommand_test.s
+	@echo ... tests/devices_test.obj
+	@echo ... tests/devices_test.i
+	@echo ... tests/devices_test.s
+	@echo ... tests/test.obj
+	@echo ... tests/test.i
+	@echo ... tests/test.s
 .PHONY : help
 
 

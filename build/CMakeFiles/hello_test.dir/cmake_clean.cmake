@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/hello_test.dir/src/FileDataParser.cpp.obj"
+  "CMakeFiles/hello_test.dir/src/FileDataParser.cpp.obj.d"
+  "CMakeFiles/hello_test.dir/src/Fileloader.cpp.obj"
+  "CMakeFiles/hello_test.dir/src/Fileloader.cpp.obj.d"
+  "CMakeFiles/hello_test.dir/src/LogicSimulator.cpp.obj"
+  "CMakeFiles/hello_test.dir/src/LogicSimulator.cpp.obj.d"
+  "CMakeFiles/hello_test.dir/src/StringParser.cpp.obj"
+  "CMakeFiles/hello_test.dir/src/StringParser.cpp.obj.d"
+  "CMakeFiles/hello_test.dir/src/TextUI.cpp.obj"
+  "CMakeFiles/hello_test.dir/src/TextUI.cpp.obj.d"
+  "CMakeFiles/hello_test.dir/src/UserCommand.cpp.obj"
+  "CMakeFiles/hello_test.dir/src/UserCommand.cpp.obj.d"
+  "CMakeFiles/hello_test.dir/src/devices/Device.cpp.obj"
+  "CMakeFiles/hello_test.dir/src/devices/Device.cpp.obj.d"
+  "CMakeFiles/hello_test.dir/src/devices/GateAND.cpp.obj"
+  "CMakeFiles/hello_test.dir/src/devices/GateAND.cpp.obj.d"
+  "CMakeFiles/hello_test.dir/src/devices/GateNOT.cpp.obj"
+  "CMakeFiles/hello_test.dir/src/devices/GateNOT.cpp.obj.d"
+  "CMakeFiles/hello_test.dir/src/devices/GateOR.cpp.obj"
+  "CMakeFiles/hello_test.dir/src/devices/GateOR.cpp.obj.d"
+  "CMakeFiles/hello_test.dir/src/devices/IPin.cpp.obj"
+  "CMakeFiles/hello_test.dir/src/devices/IPin.cpp.obj.d"
+  "CMakeFiles/hello_test.dir/src/devices/OPin.cpp.obj"
+  "CMakeFiles/hello_test.dir/src/devices/OPin.cpp.obj.d"
+  "CMakeFiles/hello_test.dir/tests/LogicSimulator_test.cpp.obj"
+  "CMakeFiles/hello_test.dir/tests/LogicSimulator_test.cpp.obj.d"
+  "CMakeFiles/hello_test.dir/tests/UserCommand_test.cpp.obj"
+  "CMakeFiles/hello_test.dir/tests/UserCommand_test.cpp.obj.d"
+  "CMakeFiles/hello_test.dir/tests/devices_test.cpp.obj"
+  "CMakeFiles/hello_test.dir/tests/devices_test.cpp.obj.d"
+  "CMakeFiles/hello_test.dir/tests/test.cpp.obj"
+  "CMakeFiles/hello_test.dir/tests/test.cpp.obj.d"
+  "hello_test.exe"
+  "hello_test.exe.manifest"
+  "hello_test.pdb"
+  "libhello_test.dll.a"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/hello_test.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

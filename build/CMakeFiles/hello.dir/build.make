@@ -68,34 +68,240 @@ include CMakeFiles/hello.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/hello.dir/flags.make
 
-CMakeFiles/hello.dir/main.cpp.obj: CMakeFiles/hello.dir/flags.make
-CMakeFiles/hello.dir/main.cpp.obj: CMakeFiles/hello.dir/includes_CXX.rsp
-CMakeFiles/hello.dir/main.cpp.obj: D:/aaMyCode/hw1/main.cpp
-CMakeFiles/hello.dir/main.cpp.obj: CMakeFiles/hello.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\aaMyCode\hw1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hello.dir/main.cpp.obj"
-	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello.dir/main.cpp.obj -MF CMakeFiles\hello.dir\main.cpp.obj.d -o CMakeFiles\hello.dir\main.cpp.obj -c D:\aaMyCode\hw1\main.cpp
+CMakeFiles/hello.dir/src/FileDataParser.cpp.obj: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/FileDataParser.cpp.obj: CMakeFiles/hello.dir/includes_CXX.rsp
+CMakeFiles/hello.dir/src/FileDataParser.cpp.obj: D:/aaMyCode/hw1/src/FileDataParser.cpp
+CMakeFiles/hello.dir/src/FileDataParser.cpp.obj: CMakeFiles/hello.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\aaMyCode\hw1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hello.dir/src/FileDataParser.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello.dir/src/FileDataParser.cpp.obj -MF CMakeFiles\hello.dir\src\FileDataParser.cpp.obj.d -o CMakeFiles\hello.dir\src\FileDataParser.cpp.obj -c D:\aaMyCode\hw1\src\FileDataParser.cpp
 
-CMakeFiles/hello.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/main.cpp.i"
-	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\aaMyCode\hw1\main.cpp > CMakeFiles\hello.dir\main.cpp.i
+CMakeFiles/hello.dir/src/FileDataParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/FileDataParser.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\aaMyCode\hw1\src\FileDataParser.cpp > CMakeFiles\hello.dir\src\FileDataParser.cpp.i
 
-CMakeFiles/hello.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/main.cpp.s"
-	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\aaMyCode\hw1\main.cpp -o CMakeFiles\hello.dir\main.cpp.s
+CMakeFiles/hello.dir/src/FileDataParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/FileDataParser.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\aaMyCode\hw1\src\FileDataParser.cpp -o CMakeFiles\hello.dir\src\FileDataParser.cpp.s
+
+CMakeFiles/hello.dir/src/Fileloader.cpp.obj: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/Fileloader.cpp.obj: CMakeFiles/hello.dir/includes_CXX.rsp
+CMakeFiles/hello.dir/src/Fileloader.cpp.obj: D:/aaMyCode/hw1/src/Fileloader.cpp
+CMakeFiles/hello.dir/src/Fileloader.cpp.obj: CMakeFiles/hello.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\aaMyCode\hw1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hello.dir/src/Fileloader.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello.dir/src/Fileloader.cpp.obj -MF CMakeFiles\hello.dir\src\Fileloader.cpp.obj.d -o CMakeFiles\hello.dir\src\Fileloader.cpp.obj -c D:\aaMyCode\hw1\src\Fileloader.cpp
+
+CMakeFiles/hello.dir/src/Fileloader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/Fileloader.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\aaMyCode\hw1\src\Fileloader.cpp > CMakeFiles\hello.dir\src\Fileloader.cpp.i
+
+CMakeFiles/hello.dir/src/Fileloader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/Fileloader.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\aaMyCode\hw1\src\Fileloader.cpp -o CMakeFiles\hello.dir\src\Fileloader.cpp.s
+
+CMakeFiles/hello.dir/src/LogicSimulator.cpp.obj: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/LogicSimulator.cpp.obj: CMakeFiles/hello.dir/includes_CXX.rsp
+CMakeFiles/hello.dir/src/LogicSimulator.cpp.obj: D:/aaMyCode/hw1/src/LogicSimulator.cpp
+CMakeFiles/hello.dir/src/LogicSimulator.cpp.obj: CMakeFiles/hello.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\aaMyCode\hw1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hello.dir/src/LogicSimulator.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello.dir/src/LogicSimulator.cpp.obj -MF CMakeFiles\hello.dir\src\LogicSimulator.cpp.obj.d -o CMakeFiles\hello.dir\src\LogicSimulator.cpp.obj -c D:\aaMyCode\hw1\src\LogicSimulator.cpp
+
+CMakeFiles/hello.dir/src/LogicSimulator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/LogicSimulator.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\aaMyCode\hw1\src\LogicSimulator.cpp > CMakeFiles\hello.dir\src\LogicSimulator.cpp.i
+
+CMakeFiles/hello.dir/src/LogicSimulator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/LogicSimulator.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\aaMyCode\hw1\src\LogicSimulator.cpp -o CMakeFiles\hello.dir\src\LogicSimulator.cpp.s
+
+CMakeFiles/hello.dir/src/StringParser.cpp.obj: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/StringParser.cpp.obj: CMakeFiles/hello.dir/includes_CXX.rsp
+CMakeFiles/hello.dir/src/StringParser.cpp.obj: D:/aaMyCode/hw1/src/StringParser.cpp
+CMakeFiles/hello.dir/src/StringParser.cpp.obj: CMakeFiles/hello.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\aaMyCode\hw1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/hello.dir/src/StringParser.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello.dir/src/StringParser.cpp.obj -MF CMakeFiles\hello.dir\src\StringParser.cpp.obj.d -o CMakeFiles\hello.dir\src\StringParser.cpp.obj -c D:\aaMyCode\hw1\src\StringParser.cpp
+
+CMakeFiles/hello.dir/src/StringParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/StringParser.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\aaMyCode\hw1\src\StringParser.cpp > CMakeFiles\hello.dir\src\StringParser.cpp.i
+
+CMakeFiles/hello.dir/src/StringParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/StringParser.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\aaMyCode\hw1\src\StringParser.cpp -o CMakeFiles\hello.dir\src\StringParser.cpp.s
+
+CMakeFiles/hello.dir/src/TextUI.cpp.obj: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/TextUI.cpp.obj: CMakeFiles/hello.dir/includes_CXX.rsp
+CMakeFiles/hello.dir/src/TextUI.cpp.obj: D:/aaMyCode/hw1/src/TextUI.cpp
+CMakeFiles/hello.dir/src/TextUI.cpp.obj: CMakeFiles/hello.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\aaMyCode\hw1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/hello.dir/src/TextUI.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello.dir/src/TextUI.cpp.obj -MF CMakeFiles\hello.dir\src\TextUI.cpp.obj.d -o CMakeFiles\hello.dir\src\TextUI.cpp.obj -c D:\aaMyCode\hw1\src\TextUI.cpp
+
+CMakeFiles/hello.dir/src/TextUI.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/TextUI.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\aaMyCode\hw1\src\TextUI.cpp > CMakeFiles\hello.dir\src\TextUI.cpp.i
+
+CMakeFiles/hello.dir/src/TextUI.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/TextUI.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\aaMyCode\hw1\src\TextUI.cpp -o CMakeFiles\hello.dir\src\TextUI.cpp.s
+
+CMakeFiles/hello.dir/src/UserCommand.cpp.obj: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/UserCommand.cpp.obj: CMakeFiles/hello.dir/includes_CXX.rsp
+CMakeFiles/hello.dir/src/UserCommand.cpp.obj: D:/aaMyCode/hw1/src/UserCommand.cpp
+CMakeFiles/hello.dir/src/UserCommand.cpp.obj: CMakeFiles/hello.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\aaMyCode\hw1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/hello.dir/src/UserCommand.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello.dir/src/UserCommand.cpp.obj -MF CMakeFiles\hello.dir\src\UserCommand.cpp.obj.d -o CMakeFiles\hello.dir\src\UserCommand.cpp.obj -c D:\aaMyCode\hw1\src\UserCommand.cpp
+
+CMakeFiles/hello.dir/src/UserCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/UserCommand.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\aaMyCode\hw1\src\UserCommand.cpp > CMakeFiles\hello.dir\src\UserCommand.cpp.i
+
+CMakeFiles/hello.dir/src/UserCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/UserCommand.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\aaMyCode\hw1\src\UserCommand.cpp -o CMakeFiles\hello.dir\src\UserCommand.cpp.s
+
+CMakeFiles/hello.dir/src/devices/Device.cpp.obj: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/devices/Device.cpp.obj: CMakeFiles/hello.dir/includes_CXX.rsp
+CMakeFiles/hello.dir/src/devices/Device.cpp.obj: D:/aaMyCode/hw1/src/devices/Device.cpp
+CMakeFiles/hello.dir/src/devices/Device.cpp.obj: CMakeFiles/hello.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\aaMyCode\hw1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/hello.dir/src/devices/Device.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello.dir/src/devices/Device.cpp.obj -MF CMakeFiles\hello.dir\src\devices\Device.cpp.obj.d -o CMakeFiles\hello.dir\src\devices\Device.cpp.obj -c D:\aaMyCode\hw1\src\devices\Device.cpp
+
+CMakeFiles/hello.dir/src/devices/Device.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/devices/Device.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\aaMyCode\hw1\src\devices\Device.cpp > CMakeFiles\hello.dir\src\devices\Device.cpp.i
+
+CMakeFiles/hello.dir/src/devices/Device.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/devices/Device.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\aaMyCode\hw1\src\devices\Device.cpp -o CMakeFiles\hello.dir\src\devices\Device.cpp.s
+
+CMakeFiles/hello.dir/src/devices/GateAND.cpp.obj: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/devices/GateAND.cpp.obj: CMakeFiles/hello.dir/includes_CXX.rsp
+CMakeFiles/hello.dir/src/devices/GateAND.cpp.obj: D:/aaMyCode/hw1/src/devices/GateAND.cpp
+CMakeFiles/hello.dir/src/devices/GateAND.cpp.obj: CMakeFiles/hello.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\aaMyCode\hw1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/hello.dir/src/devices/GateAND.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello.dir/src/devices/GateAND.cpp.obj -MF CMakeFiles\hello.dir\src\devices\GateAND.cpp.obj.d -o CMakeFiles\hello.dir\src\devices\GateAND.cpp.obj -c D:\aaMyCode\hw1\src\devices\GateAND.cpp
+
+CMakeFiles/hello.dir/src/devices/GateAND.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/devices/GateAND.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\aaMyCode\hw1\src\devices\GateAND.cpp > CMakeFiles\hello.dir\src\devices\GateAND.cpp.i
+
+CMakeFiles/hello.dir/src/devices/GateAND.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/devices/GateAND.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\aaMyCode\hw1\src\devices\GateAND.cpp -o CMakeFiles\hello.dir\src\devices\GateAND.cpp.s
+
+CMakeFiles/hello.dir/src/devices/GateNOT.cpp.obj: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/devices/GateNOT.cpp.obj: CMakeFiles/hello.dir/includes_CXX.rsp
+CMakeFiles/hello.dir/src/devices/GateNOT.cpp.obj: D:/aaMyCode/hw1/src/devices/GateNOT.cpp
+CMakeFiles/hello.dir/src/devices/GateNOT.cpp.obj: CMakeFiles/hello.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\aaMyCode\hw1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/hello.dir/src/devices/GateNOT.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello.dir/src/devices/GateNOT.cpp.obj -MF CMakeFiles\hello.dir\src\devices\GateNOT.cpp.obj.d -o CMakeFiles\hello.dir\src\devices\GateNOT.cpp.obj -c D:\aaMyCode\hw1\src\devices\GateNOT.cpp
+
+CMakeFiles/hello.dir/src/devices/GateNOT.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/devices/GateNOT.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\aaMyCode\hw1\src\devices\GateNOT.cpp > CMakeFiles\hello.dir\src\devices\GateNOT.cpp.i
+
+CMakeFiles/hello.dir/src/devices/GateNOT.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/devices/GateNOT.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\aaMyCode\hw1\src\devices\GateNOT.cpp -o CMakeFiles\hello.dir\src\devices\GateNOT.cpp.s
+
+CMakeFiles/hello.dir/src/devices/GateOR.cpp.obj: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/devices/GateOR.cpp.obj: CMakeFiles/hello.dir/includes_CXX.rsp
+CMakeFiles/hello.dir/src/devices/GateOR.cpp.obj: D:/aaMyCode/hw1/src/devices/GateOR.cpp
+CMakeFiles/hello.dir/src/devices/GateOR.cpp.obj: CMakeFiles/hello.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\aaMyCode\hw1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/hello.dir/src/devices/GateOR.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello.dir/src/devices/GateOR.cpp.obj -MF CMakeFiles\hello.dir\src\devices\GateOR.cpp.obj.d -o CMakeFiles\hello.dir\src\devices\GateOR.cpp.obj -c D:\aaMyCode\hw1\src\devices\GateOR.cpp
+
+CMakeFiles/hello.dir/src/devices/GateOR.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/devices/GateOR.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\aaMyCode\hw1\src\devices\GateOR.cpp > CMakeFiles\hello.dir\src\devices\GateOR.cpp.i
+
+CMakeFiles/hello.dir/src/devices/GateOR.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/devices/GateOR.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\aaMyCode\hw1\src\devices\GateOR.cpp -o CMakeFiles\hello.dir\src\devices\GateOR.cpp.s
+
+CMakeFiles/hello.dir/src/devices/IPin.cpp.obj: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/devices/IPin.cpp.obj: CMakeFiles/hello.dir/includes_CXX.rsp
+CMakeFiles/hello.dir/src/devices/IPin.cpp.obj: D:/aaMyCode/hw1/src/devices/IPin.cpp
+CMakeFiles/hello.dir/src/devices/IPin.cpp.obj: CMakeFiles/hello.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\aaMyCode\hw1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/hello.dir/src/devices/IPin.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello.dir/src/devices/IPin.cpp.obj -MF CMakeFiles\hello.dir\src\devices\IPin.cpp.obj.d -o CMakeFiles\hello.dir\src\devices\IPin.cpp.obj -c D:\aaMyCode\hw1\src\devices\IPin.cpp
+
+CMakeFiles/hello.dir/src/devices/IPin.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/devices/IPin.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\aaMyCode\hw1\src\devices\IPin.cpp > CMakeFiles\hello.dir\src\devices\IPin.cpp.i
+
+CMakeFiles/hello.dir/src/devices/IPin.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/devices/IPin.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\aaMyCode\hw1\src\devices\IPin.cpp -o CMakeFiles\hello.dir\src\devices\IPin.cpp.s
+
+CMakeFiles/hello.dir/src/devices/OPin.cpp.obj: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/devices/OPin.cpp.obj: CMakeFiles/hello.dir/includes_CXX.rsp
+CMakeFiles/hello.dir/src/devices/OPin.cpp.obj: D:/aaMyCode/hw1/src/devices/OPin.cpp
+CMakeFiles/hello.dir/src/devices/OPin.cpp.obj: CMakeFiles/hello.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\aaMyCode\hw1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/hello.dir/src/devices/OPin.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello.dir/src/devices/OPin.cpp.obj -MF CMakeFiles\hello.dir\src\devices\OPin.cpp.obj.d -o CMakeFiles\hello.dir\src\devices\OPin.cpp.obj -c D:\aaMyCode\hw1\src\devices\OPin.cpp
+
+CMakeFiles/hello.dir/src/devices/OPin.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/devices/OPin.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\aaMyCode\hw1\src\devices\OPin.cpp > CMakeFiles\hello.dir\src\devices\OPin.cpp.i
+
+CMakeFiles/hello.dir/src/devices/OPin.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/devices/OPin.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\aaMyCode\hw1\src\devices\OPin.cpp -o CMakeFiles\hello.dir\src\devices\OPin.cpp.s
+
+CMakeFiles/hello.dir/src/main.cpp.obj: CMakeFiles/hello.dir/flags.make
+CMakeFiles/hello.dir/src/main.cpp.obj: CMakeFiles/hello.dir/includes_CXX.rsp
+CMakeFiles/hello.dir/src/main.cpp.obj: D:/aaMyCode/hw1/src/main.cpp
+CMakeFiles/hello.dir/src/main.cpp.obj: CMakeFiles/hello.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\aaMyCode\hw1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/hello.dir/src/main.cpp.obj"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hello.dir/src/main.cpp.obj -MF CMakeFiles\hello.dir\src\main.cpp.obj.d -o CMakeFiles\hello.dir\src\main.cpp.obj -c D:\aaMyCode\hw1\src\main.cpp
+
+CMakeFiles/hello.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/main.cpp.i"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\aaMyCode\hw1\src\main.cpp > CMakeFiles\hello.dir\src\main.cpp.i
+
+CMakeFiles/hello.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/main.cpp.s"
+	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\aaMyCode\hw1\src\main.cpp -o CMakeFiles\hello.dir\src\main.cpp.s
 
 # Object files for target hello
 hello_OBJECTS = \
-"CMakeFiles/hello.dir/main.cpp.obj"
+"CMakeFiles/hello.dir/src/FileDataParser.cpp.obj" \
+"CMakeFiles/hello.dir/src/Fileloader.cpp.obj" \
+"CMakeFiles/hello.dir/src/LogicSimulator.cpp.obj" \
+"CMakeFiles/hello.dir/src/StringParser.cpp.obj" \
+"CMakeFiles/hello.dir/src/TextUI.cpp.obj" \
+"CMakeFiles/hello.dir/src/UserCommand.cpp.obj" \
+"CMakeFiles/hello.dir/src/devices/Device.cpp.obj" \
+"CMakeFiles/hello.dir/src/devices/GateAND.cpp.obj" \
+"CMakeFiles/hello.dir/src/devices/GateNOT.cpp.obj" \
+"CMakeFiles/hello.dir/src/devices/GateOR.cpp.obj" \
+"CMakeFiles/hello.dir/src/devices/IPin.cpp.obj" \
+"CMakeFiles/hello.dir/src/devices/OPin.cpp.obj" \
+"CMakeFiles/hello.dir/src/main.cpp.obj"
 
 # External object files for target hello
 hello_EXTERNAL_OBJECTS =
 
-hello.exe: CMakeFiles/hello.dir/main.cpp.obj
+hello.exe: CMakeFiles/hello.dir/src/FileDataParser.cpp.obj
+hello.exe: CMakeFiles/hello.dir/src/Fileloader.cpp.obj
+hello.exe: CMakeFiles/hello.dir/src/LogicSimulator.cpp.obj
+hello.exe: CMakeFiles/hello.dir/src/StringParser.cpp.obj
+hello.exe: CMakeFiles/hello.dir/src/TextUI.cpp.obj
+hello.exe: CMakeFiles/hello.dir/src/UserCommand.cpp.obj
+hello.exe: CMakeFiles/hello.dir/src/devices/Device.cpp.obj
+hello.exe: CMakeFiles/hello.dir/src/devices/GateAND.cpp.obj
+hello.exe: CMakeFiles/hello.dir/src/devices/GateNOT.cpp.obj
+hello.exe: CMakeFiles/hello.dir/src/devices/GateOR.cpp.obj
+hello.exe: CMakeFiles/hello.dir/src/devices/IPin.cpp.obj
+hello.exe: CMakeFiles/hello.dir/src/devices/OPin.cpp.obj
+hello.exe: CMakeFiles/hello.dir/src/main.cpp.obj
 hello.exe: CMakeFiles/hello.dir/build.make
+hello.exe: lib/libgtest_main.a
+hello.exe: lib/libgtest.a
 hello.exe: CMakeFiles/hello.dir/linkLibs.rsp
 hello.exe: CMakeFiles/hello.dir/objects1.rsp
 hello.exe: CMakeFiles/hello.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\aaMyCode\hw1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable hello.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\aaMyCode\hw1\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable hello.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\hello.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

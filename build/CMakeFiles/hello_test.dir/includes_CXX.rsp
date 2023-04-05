@@ -1,0 +1,1 @@
+-ID:/aaMyCode/hw1/include -ID:/aaMyCode/hw1/include/devices -ID:/aaMyCode/hw1 -isystem "D:/aaMyCode/hw1/build/_deps/googletest-src/googletest/include" -isystem "D:/aaMyCode/hw1/build/_deps/googletest-src/googletest" -isystem "D:/aaMyCode/hw1/build/_deps/googletest-src/googlemock/include" -isystem "D:/aaMyCode/hw1/build/_deps/googletest-src/googlemock"

@@ -1,8 +1,200 @@
 [
 {
   "directory": "D:/aaMyCode/hw1/build",
-  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello.dir\\main.cpp.obj -c D:\\aaMyCode\\hw1\\main.cpp",
-  "file": "D:/aaMyCode/hw1/main.cpp",
-  "output": "CMakeFiles/hello.dir/main.cpp.obj"
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello.dir\\src\\FileDataParser.cpp.obj -c D:\\aaMyCode\\hw1\\src\\FileDataParser.cpp",
+  "file": "D:/aaMyCode/hw1/src/FileDataParser.cpp",
+  "output": "CMakeFiles/hello.dir/src/FileDataParser.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello.dir\\src\\Fileloader.cpp.obj -c D:\\aaMyCode\\hw1\\src\\Fileloader.cpp",
+  "file": "D:/aaMyCode/hw1/src/Fileloader.cpp",
+  "output": "CMakeFiles/hello.dir/src/Fileloader.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello.dir\\src\\LogicSimulator.cpp.obj -c D:\\aaMyCode\\hw1\\src\\LogicSimulator.cpp",
+  "file": "D:/aaMyCode/hw1/src/LogicSimulator.cpp",
+  "output": "CMakeFiles/hello.dir/src/LogicSimulator.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello.dir\\src\\StringParser.cpp.obj -c D:\\aaMyCode\\hw1\\src\\StringParser.cpp",
+  "file": "D:/aaMyCode/hw1/src/StringParser.cpp",
+  "output": "CMakeFiles/hello.dir/src/StringParser.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello.dir\\src\\TextUI.cpp.obj -c D:\\aaMyCode\\hw1\\src\\TextUI.cpp",
+  "file": "D:/aaMyCode/hw1/src/TextUI.cpp",
+  "output": "CMakeFiles/hello.dir/src/TextUI.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello.dir\\src\\UserCommand.cpp.obj -c D:\\aaMyCode\\hw1\\src\\UserCommand.cpp",
+  "file": "D:/aaMyCode/hw1/src/UserCommand.cpp",
+  "output": "CMakeFiles/hello.dir/src/UserCommand.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello.dir\\src\\devices\\Device.cpp.obj -c D:\\aaMyCode\\hw1\\src\\devices\\Device.cpp",
+  "file": "D:/aaMyCode/hw1/src/devices/Device.cpp",
+  "output": "CMakeFiles/hello.dir/src/devices/Device.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello.dir\\src\\devices\\GateAND.cpp.obj -c D:\\aaMyCode\\hw1\\src\\devices\\GateAND.cpp",
+  "file": "D:/aaMyCode/hw1/src/devices/GateAND.cpp",
+  "output": "CMakeFiles/hello.dir/src/devices/GateAND.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello.dir\\src\\devices\\GateNOT.cpp.obj -c D:\\aaMyCode\\hw1\\src\\devices\\GateNOT.cpp",
+  "file": "D:/aaMyCode/hw1/src/devices/GateNOT.cpp",
+  "output": "CMakeFiles/hello.dir/src/devices/GateNOT.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello.dir\\src\\devices\\GateOR.cpp.obj -c D:\\aaMyCode\\hw1\\src\\devices\\GateOR.cpp",
+  "file": "D:/aaMyCode/hw1/src/devices/GateOR.cpp",
+  "output": "CMakeFiles/hello.dir/src/devices/GateOR.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello.dir\\src\\devices\\IPin.cpp.obj -c D:\\aaMyCode\\hw1\\src\\devices\\IPin.cpp",
+  "file": "D:/aaMyCode/hw1/src/devices/IPin.cpp",
+  "output": "CMakeFiles/hello.dir/src/devices/IPin.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello.dir\\src\\devices\\OPin.cpp.obj -c D:\\aaMyCode\\hw1\\src\\devices\\OPin.cpp",
+  "file": "D:/aaMyCode/hw1/src/devices/OPin.cpp",
+  "output": "CMakeFiles/hello.dir/src/devices/OPin.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello.dir\\src\\main.cpp.obj -c D:\\aaMyCode\\hw1\\src\\main.cpp",
+  "file": "D:/aaMyCode/hw1/src/main.cpp",
+  "output": "CMakeFiles/hello.dir/src/main.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello_test.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello_test.dir\\tests\\LogicSimulator_test.cpp.obj -c D:\\aaMyCode\\hw1\\tests\\LogicSimulator_test.cpp",
+  "file": "D:/aaMyCode/hw1/tests/LogicSimulator_test.cpp",
+  "output": "CMakeFiles/hello_test.dir/tests/LogicSimulator_test.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello_test.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello_test.dir\\tests\\UserCommand_test.cpp.obj -c D:\\aaMyCode\\hw1\\tests\\UserCommand_test.cpp",
+  "file": "D:/aaMyCode/hw1/tests/UserCommand_test.cpp",
+  "output": "CMakeFiles/hello_test.dir/tests/UserCommand_test.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello_test.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello_test.dir\\tests\\devices_test.cpp.obj -c D:\\aaMyCode\\hw1\\tests\\devices_test.cpp",
+  "file": "D:/aaMyCode/hw1/tests/devices_test.cpp",
+  "output": "CMakeFiles/hello_test.dir/tests/devices_test.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello_test.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello_test.dir\\tests\\test.cpp.obj -c D:\\aaMyCode\\hw1\\tests\\test.cpp",
+  "file": "D:/aaMyCode/hw1/tests/test.cpp",
+  "output": "CMakeFiles/hello_test.dir/tests/test.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello_test.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello_test.dir\\src\\FileDataParser.cpp.obj -c D:\\aaMyCode\\hw1\\src\\FileDataParser.cpp",
+  "file": "D:/aaMyCode/hw1/src/FileDataParser.cpp",
+  "output": "CMakeFiles/hello_test.dir/src/FileDataParser.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello_test.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello_test.dir\\src\\Fileloader.cpp.obj -c D:\\aaMyCode\\hw1\\src\\Fileloader.cpp",
+  "file": "D:/aaMyCode/hw1/src/Fileloader.cpp",
+  "output": "CMakeFiles/hello_test.dir/src/Fileloader.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello_test.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello_test.dir\\src\\LogicSimulator.cpp.obj -c D:\\aaMyCode\\hw1\\src\\LogicSimulator.cpp",
+  "file": "D:/aaMyCode/hw1/src/LogicSimulator.cpp",
+  "output": "CMakeFiles/hello_test.dir/src/LogicSimulator.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello_test.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello_test.dir\\src\\StringParser.cpp.obj -c D:\\aaMyCode\\hw1\\src\\StringParser.cpp",
+  "file": "D:/aaMyCode/hw1/src/StringParser.cpp",
+  "output": "CMakeFiles/hello_test.dir/src/StringParser.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello_test.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello_test.dir\\src\\TextUI.cpp.obj -c D:\\aaMyCode\\hw1\\src\\TextUI.cpp",
+  "file": "D:/aaMyCode/hw1/src/TextUI.cpp",
+  "output": "CMakeFiles/hello_test.dir/src/TextUI.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello_test.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello_test.dir\\src\\UserCommand.cpp.obj -c D:\\aaMyCode\\hw1\\src\\UserCommand.cpp",
+  "file": "D:/aaMyCode/hw1/src/UserCommand.cpp",
+  "output": "CMakeFiles/hello_test.dir/src/UserCommand.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello_test.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello_test.dir\\src\\devices\\Device.cpp.obj -c D:\\aaMyCode\\hw1\\src\\devices\\Device.cpp",
+  "file": "D:/aaMyCode/hw1/src/devices/Device.cpp",
+  "output": "CMakeFiles/hello_test.dir/src/devices/Device.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello_test.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello_test.dir\\src\\devices\\GateAND.cpp.obj -c D:\\aaMyCode\\hw1\\src\\devices\\GateAND.cpp",
+  "file": "D:/aaMyCode/hw1/src/devices/GateAND.cpp",
+  "output": "CMakeFiles/hello_test.dir/src/devices/GateAND.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello_test.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello_test.dir\\src\\devices\\GateNOT.cpp.obj -c D:\\aaMyCode\\hw1\\src\\devices\\GateNOT.cpp",
+  "file": "D:/aaMyCode/hw1/src/devices/GateNOT.cpp",
+  "output": "CMakeFiles/hello_test.dir/src/devices/GateNOT.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello_test.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello_test.dir\\src\\devices\\GateOR.cpp.obj -c D:\\aaMyCode\\hw1\\src\\devices\\GateOR.cpp",
+  "file": "D:/aaMyCode/hw1/src/devices/GateOR.cpp",
+  "output": "CMakeFiles/hello_test.dir/src/devices/GateOR.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello_test.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello_test.dir\\src\\devices\\IPin.cpp.obj -c D:\\aaMyCode\\hw1\\src\\devices\\IPin.cpp",
+  "file": "D:/aaMyCode/hw1/src/devices/IPin.cpp",
+  "output": "CMakeFiles/hello_test.dir/src/devices/IPin.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/hello_test.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\hello_test.dir\\src\\devices\\OPin.cpp.obj -c D:\\aaMyCode\\hw1\\src\\devices\\OPin.cpp",
+  "file": "D:/aaMyCode/hw1/src/devices/OPin.cpp",
+  "output": "CMakeFiles/hello_test.dir/src/devices/OPin.cpp.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build/_deps/googletest-build/googlemock",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/gmock.dir/includes_CXX.rsp -std=c++17 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gmock.dir\\src\\gmock-all.cc.obj -c D:\\aaMyCode\\hw1\\build\\_deps\\googletest-src\\googlemock\\src\\gmock-all.cc",
+  "file": "D:/aaMyCode/hw1/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build/_deps/googletest-build/googlemock",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/gmock_main.dir/includes_CXX.rsp -std=c++17 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gmock_main.dir\\src\\gmock_main.cc.obj -c D:\\aaMyCode\\hw1\\build\\_deps\\googletest-src\\googlemock\\src\\gmock_main.cc",
+  "file": "D:/aaMyCode/hw1/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build/_deps/googletest-build/googletest",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/gtest.dir/includes_CXX.rsp -std=c++17 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gtest.dir\\src\\gtest-all.cc.obj -c D:\\aaMyCode\\hw1\\build\\_deps\\googletest-src\\googletest\\src\\gtest-all.cc",
+  "file": "D:/aaMyCode/hw1/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj"
+},
+{
+  "directory": "D:/aaMyCode/hw1/build/_deps/googletest-build/googletest",
+  "command": "C:\\mingw64\\bin\\c++.exe  @CMakeFiles/gtest_main.dir/includes_CXX.rsp -std=c++17 -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gtest_main.dir\\src\\gtest_main.cc.obj -c D:\\aaMyCode\\hw1\\build\\_deps\\googletest-src\\googletest\\src\\gtest_main.cc",
+  "file": "D:/aaMyCode/hw1/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj"
 }
 ]

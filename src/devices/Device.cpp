@@ -16,7 +16,7 @@ bool Device::isAllIPinsSet() {
 }
 
 Device::~Device() {
-  cout << "device:" << name << " has been deconstruct" << endl;
+  cout << "device:" << name << " has been deconstructed" << endl;
 }
 
 void Device::addInputPin(Device *device) { iPins.push_back(device); }

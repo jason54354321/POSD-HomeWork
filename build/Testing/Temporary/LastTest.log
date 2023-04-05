@@ -1,0 +1,125 @@
+Start testing: Mar 31 20:10 ¥x¥_¼Ð·Ç®É¶¡
+----------------------------------------------------------
+1/1 Testing: hello_test
+1/1 Test: hello_test
+Command: "D:/aaMyCode/hw1/build/hello_test.exe"
+Directory: D:/aaMyCode/hw1/build
+"hello_test" start time: Mar 31 20:10 ¥x¥_¼Ð·Ç®É¶¡
+Output:
+----------------------------------------------------------
+[0;32m[==========] [mRunning 21 tests from 10 test suites.
+[0;32m[----------] [mGlobal test environment set-up.
+[0;32m[----------] [m1 test from IPinTest
+[0;32m[ RUN      ] [mIPinTest.SetterGetter
+[0;32m[       OK ] [mIPinTest.SetterGetter (0 ms)
+[0;32m[----------] [m1 test from IPinTest (0 ms total)
+
+[0;32m[----------] [m1 test from OPinTest
+[0;32m[ RUN      ] [mOPinTest.SetterGetter
+[0;32m[       OK ] [mOPinTest.SetterGetter (0 ms)
+[0;32m[----------] [m1 test from OPinTest (0 ms total)
+
+[0;32m[----------] [m3 tests from GateORTest
+[0;32m[ RUN      ] [mGateORTest.CalOutputLOW
+device: has been deconstruct
+device: has been deconstruct
+device: has been deconstruct
+[0;32m[       OK ] [mGateORTest.CalOutputLOW (0 ms)
+[0;32m[ RUN      ] [mGateORTest.CalOutputHIGH
+device: has been deconstruct
+device: has been deconstruct
+device: has been deconstruct
+[0;32m[       OK ] [mGateORTest.CalOutputHIGH (0 ms)
+[0;32m[ RUN      ] [mGateORTest.CalOutputBOTH
+device: has been deconstruct
+device: has been deconstruct
+device: has been deconstruct
+[0;32m[       OK ] [mGateORTest.CalOutputBOTH (0 ms)
+[0;32m[----------] [m3 tests from GateORTest (0 ms total)
+
+[0;32m[----------] [m3 tests from GateANDTest
+[0;32m[ RUN      ] [mGateANDTest.CalOutputLOW
+device: has been deconstruct
+device: has been deconstruct
+device: has been deconstruct
+[0;32m[       OK ] [mGateANDTest.CalOutputLOW (0 ms)
+[0;32m[ RUN      ] [mGateANDTest.CalOutputHIGH
+device: has been deconstruct
+device: has been deconstruct
+device: has been deconstruct
+[0;32m[       OK ] [mGateANDTest.CalOutputHIGH (0 ms)
+[0;32m[ RUN      ] [mGateANDTest.CalOutputBOTH
+device: has been deconstruct
+device: has been deconstruct
+device: has been deconstruct
+[0;32m[       OK ] [mGateANDTest.CalOutputBOTH (0 ms)
+[0;32m[----------] [m3 tests from GateANDTest (0 ms total)
+
+[0;32m[----------] [m2 tests from GateNOTTest
+[0;32m[ RUN      ] [mGateNOTTest.CalOutputLOW
+device: has been deconstruct
+device: has been deconstruct
+device: has been deconstruct
+[0;32m[       OK ] [mGateNOTTest.CalOutputLOW (0 ms)
+[0;32m[ RUN      ] [mGateNOTTest.CalOutputHIGH
+device: has been deconstruct
+device: has been deconstruct
+device: has been deconstruct
+[0;32m[       OK ] [mGateNOTTest.CalOutputHIGH (0 ms)
+[0;32m[----------] [m2 tests from GateNOTTest (0 ms total)
+
+[0;32m[----------] [m1 test from UserInputTest
+[0;32m[ RUN      ] [mUserInputTest.regex
+Wrong command format! " " is not a valid commnad.
+Wrong command format! "?" is not a valid commnad.
+Wrong command format! "20" is not a valid commnad.
+Wrong command format! "12" is not a valid commnad.
+Wrong command format! "-12" is not a valid commnad.
+[0;32m[       OK ] [mUserInputTest.regex (0 ms)
+[0;32m[----------] [m1 test from UserInputTest (0 ms total)
+
+[0;32m[----------] [m3 tests from TestLoad
+[0;32m[ RUN      ] [mTestLoad.SampleFile1
+[0;32m[       OK ] [mTestLoad.SampleFile1 (0 ms)
+[0;32m[ RUN      ] [mTestLoad.SampleFile2
+[0;32m[       OK ] [mTestLoad.SampleFile2 (0 ms)
+[0;32m[ RUN      ] [mTestLoad.MissingFile
+File not Found or file format error!!
+[0;32m[       OK ] [mTestLoad.MissingFile (0 ms)
+[0;32m[----------] [m3 tests from TestLoad (0 ms total)
+
+[0;32m[----------] [m3 tests from TestSimulationResult
+[0;32m[ RUN      ] [mTestSimulationResult.InputPin000
+[0;32m[       OK ] [mTestSimulationResult.InputPin000 (0 ms)
+[0;32m[ RUN      ] [mTestSimulationResult.InputPin010
+[0;32m[       OK ] [mTestSimulationResult.InputPin010 (0 ms)
+[0;32m[ RUN      ] [mTestSimulationResult.InputPin100
+[0;32m[       OK ] [mTestSimulationResult.InputPin100 (0 ms)
+[0;32m[----------] [m3 tests from TestSimulationResult (0 ms total)
+
+[0;32m[----------] [m3 tests from TestToBinaryString
+[0;32m[ RUN      ] [mTestToBinaryString.Convert0
+[0;32m[       OK ] [mTestToBinaryString.Convert0 (0 ms)
+[0;32m[ RUN      ] [mTestToBinaryString.Convert2
+[0;32m[       OK ] [mTestToBinaryString.Convert2 (0 ms)
+[0;32m[ RUN      ] [mTestToBinaryString.Convert5
+[0;32m[       OK ] [mTestToBinaryString.Convert5 (0 ms)
+[0;32m[----------] [m3 tests from TestToBinaryString (0 ms total)
+
+[0;32m[----------] [m1 test from TestGetTruthTable
+[0;32m[ RUN      ] [mTestGetTruthTable.normal
+[0;32m[       OK ] [mTestGetTruthTable.normal (0 ms)
+[0;32m[----------] [m1 test from TestGetTruthTable (0 ms total)
+
+[0;32m[----------] [mGlobal test environment tear-down
+[0;32m[==========] [m21 tests from 10 test suites ran. (1 ms total)
+[0;32m[  PASSED  ] [m21 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"hello_test" end time: Mar 31 20:10 ¥x¥_¼Ð·Ç®É¶¡
+"hello_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Mar 31 20:10 ¥x¥_¼Ð·Ç®É¶¡
